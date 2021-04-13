@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Billonario } from "../assets/loteriasHoy";
+import { Baloto, Billonario } from "../assets/loteriasHoy";
 
 @Component({
   selector: "my-app",
@@ -7,8 +7,15 @@ import { Billonario } from "../assets/loteriasHoy";
 })
 export class AppComponent {
   billonario: Billonario = {
-    cuatroCifras: "230.323.589",
-    tresCifras: "34.565.656"
+    cuatroCifras: "851.379.997",
+    tresCifras: "29.749.000"
+  };
+
+  baloto: Baloto = {
+    fechaUltimoResultado: "Sábado, 10 de Abril del 2021",
+    ganador: ["17", "18", "36", "37", "42", "02"],
+    fechaProximoSorteo: "Miércoles, 14 de Abril del 2021",
+    acumulado: "$6'000.000.000"
   };
 
   billonarioCentral = `<section class="baloto_r">
@@ -244,4 +251,81 @@ export class AppComponent {
         </section>
     </section>
 </main>`;
+
+  balotoCentral = `<section class="Baloto">
+    <div class="baloto_c">
+        <div class="resultado">
+            <p>resultado</p>
+        </div><img src="/content/images/logos/baloto_logo.png" alt="" class="logo-bet" />
+        <div class="ultimo_c">
+            <div class="ultimo_r">
+                <h1> <span>último</span> resultado</h1>
+                <p class="fecha_rlt">${this.baloto.fechaUltimoResultado}</p>
+            </div>
+            <div class="triangulo"> <img class="triangulo_svg" src="/content/images/triangulo.svg" alt=""> </div>
+            <div class="ultimo_m">
+                <div class="numero_round">
+                    <p>${this.baloto.ganador[0]}</p>
+                </div>
+                <div class="numero_round">
+                    <p>${this.baloto.ganador[1]}</p>
+                </div>
+                <div class="numero_round">
+                    <p>${this.baloto.ganador[2]}</p>
+                </div>
+                <div class="numero_round">
+                    <p>${this.baloto.ganador[3]}</p>
+                </div>
+                <div class="numero_round">
+                    <p>${this.baloto.ganador[4]}</p>
+                </div>
+                <div class="numero_round_red">
+                    <p>${this.baloto.ganador[5]}</p>
+            </div>
+        </div>
+        <div class="acom_s">
+            <h1>Acumulado para el sorteo</h1>
+            <p class="fecha_Acomrlt">${this.baloto.fechaProximoSorteo}</p>
+        </div>
+        <div class="price">
+            <h4>${this.baloto.acumulado}</h4>
+        </div>
+    </div>
+</section>`;
+
+  balotoLateral = `<div id="BalotoDesign" class="BalotoDesign">
+    <div class="headerBalotoDesign">
+        <div class="title">RESULTADO</div>
+        <div class="logo"> <img src="content/images/logos/baloto_logo.png" width="500"> </div>
+    </div>
+    <div class="containerBalotoDesign">
+        <div class="left">
+            <h2>ÚLTIMO RESULTADO</h2>
+            <div class="dateBaloto">${this.baloto.fechaUltimoResultado}</div>
+        </div>
+        <div class="arrow">
+            <div class="triangle-right"></div>
+        </div>
+        <div class="right">
+            <div class="result"> <span class="dot">${
+              this.baloto.ganador[0]
+            }</span> <span class="dot">${
+    this.baloto.ganador[1]
+  }</span> <span class="dot">${this.baloto.ganador[2]}</span>
+                <span class="dot">${
+                  this.baloto.ganador[3]
+                }</span> <span class="dot">${
+    this.baloto.ganador[4]
+  }</span> <span class="dot">${this.baloto.ganador[5]}</span>
+            </div>
+        </div>
+    </div>
+    <div class="datenextBaloto">
+        <h2>ACUMULADO PARA EL SORTEO</h2>
+        <div class="dateBaloto">${this.baloto.fechaProximoSorteo}</div>
+    </div> <br>
+    <div class="footerBalotoDesign">
+        <div class="acumulateBaloto">${this.baloto.acumulado}</div>
+    </div>
+</div>`;
 }

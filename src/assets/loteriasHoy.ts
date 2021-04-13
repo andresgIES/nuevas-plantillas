@@ -9,6 +9,13 @@ export interface Billonario {
   tresCifras: string;
 }
 
+export interface Baloto {
+  fechaUltimoResultado: string;
+  ganador: string[];
+  fechaProximoSorteo: string;
+  acumulado: string;
+}
+
 export const loteriasHoy: Loteria[] = [
   {
     numero: "1111",
