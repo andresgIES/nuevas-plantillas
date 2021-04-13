@@ -4,6 +4,11 @@ export interface Loteria {
   fecha: string;
 }
 
+export interface Billonario {
+  cuatroCifras: string;
+  tresCifras: string;
+}
+
 export const loteriasHoy: Loteria[] = [
   {
     numero: "1111",
