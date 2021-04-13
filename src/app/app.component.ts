@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { Baloto, Billonario } from "../assets/loteriasHoy";
+import { Baloto } from "./models/interfaces";
+import { Billonario } from "./models/interfaces";
 
 @Component({
   selector: "my-app",

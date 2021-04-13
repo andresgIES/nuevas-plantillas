@@ -1,22 +1,4 @@
-export interface Loteria {
-  nombre: string;
-  numero: string;
-  fecha: string;
-}
-
-export interface Billonario {
-  cuatroCifras: string;
-  tresCifras: string;
-}
-
-export interface Baloto {
-  fechaUltimoResultado: string;
-  ganador: string[];
-  fechaProximoSorteo: string;
-  acumulado: string;
-}
-
-export const loteriasHoy: Loteria[] = [
+export const loteriasHoy = [
   {
     numero: "1111",
     nombre: "Cauca",
