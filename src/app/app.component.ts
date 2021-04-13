@@ -10,7 +10,7 @@ import { loteriasSemanales } from "../assets/loteriasSemanales";
 
 export class AppComponent {
   resultadosSemanales: any[] = loteriasSemanales;
-  resultadosHoy = [
+  const loteriasHoyLaterarlPares: Loteria[] = [
   {
     numero: "1111",
     nombre: "Cauca",
@@ -35,7 +35,7 @@ export class AppComponent {
 
   resultado = "";
 
-  for ( i = 0, i < this.resultadosHoy.lenght; i = i + 1 ) {
+for (let i = 0; this.i < loteriasHoyLaterarlPares.length, i = i + 1 ) {    
     const element = resultadosHoy[i];
     if (i% 2 === 0) {
         const blanco = `<div class="panel30__grid__result__subgrid__secondary"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
