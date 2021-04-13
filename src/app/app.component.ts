@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
-import { Loteria } from "../assets/loteriasHoy";
-import { loteriasHoy } from "../assets/loteriasHoy";
+import { Loteria, loteriasHoy } from "../assets/loteriasHoy";
 import { loteriasSemanales } from "../assets/loteriasSemanales";
 
 @Component({
@@ -10,7 +9,7 @@ import { loteriasSemanales } from "../assets/loteriasSemanales";
 
 export class AppComponent {
   resultadosSemanales: any[] = loteriasSemanales;
-  const loteriasHoyLaterarlPares: Loteria[] = [
+  const loteriasHoy: Loteria[] = [
   {
     numero: "1111",
     nombre: "Cauca",
@@ -33,19 +32,20 @@ export class AppComponent {
   }
 ];
 
-  resultado = "";
+resultado = "";
 
-for (let i = 0; this.i < loteriasHoyLaterarlPares.length, i = i + 1 ) {    
-    const element = resultadosHoy[i];
-    if (i% 2 === 0) {
+size = loteriasHoy.length;
+
+for (var i = 0; i < size; i++) {
+    const element = loteriasHoy[i];
+    if (i % 2 === 0) {
         const blanco = `<div class="panel30__grid__result__subgrid__secondary"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
-        this.resultado.concat(blanco);
+        resultado.concat(blanco);
     }
     else {
         const cyan = `<div class="panel30__grid__result__subgrid"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
-        this.resultado.concat(cyan);
+        resultado.concat(cyan);
     }
-
 }
 
 let loteriasHoyLateral = `<section class="panel30__info">
