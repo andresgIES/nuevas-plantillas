@@ -36,7 +36,7 @@ resultado = "";
 
 size = loteriasHoy.length;
 
-for (var i = 0; i < size; i++) {
+for (var i = 0; i < size; i = i + 1;) {
     const element = loteriasHoy[i];
     if (i % 2 === 0) {
         const blanco = `<div class="panel30__grid__result__subgrid__secondary"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
@@ -48,7 +48,7 @@ for (var i = 0; i < size; i++) {
     }
 }
 
-let loteriasHoyLateral = `<section class="panel30__info">
+loteriasHoyLateral = `<section class="panel30__info">
 <div class="panel30__info__card">
     <h1 class="panel30__info__card__title">resultados hoy</h1>
     <div class="panel30__grid__subtitle">
