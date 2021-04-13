@@ -253,46 +253,26 @@ export class AppComponent {
     </section>
 </main>`;
 
-  balotoCentral = `<section class="Baloto">
-    <div class="baloto_c">
-        <div class="resultado">
-            <p>resultado</p>
-        </div><img src="/content/images/logos/baloto_logo.png" alt="" class="logo-bet" />
-        <div class="ultimo_c">
-            <div class="ultimo_r">
-                <h1> <span>último</span> resultado</h1>
-                <p class="fecha_rlt">${this.baloto.fechaUltimoResultado}</p>
-            </div>
-            <div class="triangulo"> <img class="triangulo_svg" src="/content/images/triangulo.svg" alt=""> </div>
-            <div class="ultimo_m">
-                <div class="numero_round">
-                    <p>${this.baloto.ganador[0]}</p>
-                </div>
-                <div class="numero_round">
-                    <p>${this.baloto.ganador[1]}</p>
-                </div>
-                <div class="numero_round">
-                    <p>${this.baloto.ganador[2]}</p>
-                </div>
-                <div class="numero_round">
-                    <p>${this.baloto.ganador[3]}</p>
-                </div>
-                <div class="numero_round">
-                    <p>${this.baloto.ganador[4]}</p>
-                </div>
-                <div class="numero_round_red">
-                    <p>${this.baloto.ganador[5]}</p>
-            </div>
-        </div>
-        <div class="acom_s">
-            <h1>Acumulado para el sorteo</h1>
-            <p class="fecha_Acomrlt">${this.baloto.fechaProximoSorteo}</p>
-        </div>
-        <div class="price">
-            <h4>${this.baloto.acumulado}</h4>
-        </div>
-    </div>
-</section>`;
+  balotoCentral = `
+<section class="Baloto"> <div class="baloto_c"> <div class="resultado"> <p>resultado</p> </div><img src="/content/images/logos/baloto_logo.png" alt="" class="logo-bet" /> <div class="ultimo_c"> <div class="ultimo_r"> <h1> <span>último</span> resultado</h1> <p class="fecha_rlt">${
+    this.baloto.fechaUltimoResultado
+  }</p> </div> <div class="triangulo"> <img class="triangulo_svg" src="/content/images/triangulo.svg" alt=""> </div> <div class="ultimo_m"> <div class="numero_round"> <p>${
+    this.baloto.ganador[0]
+  }</p> </div> <div class="numero_round"> <p>${
+    this.baloto.ganador[1]
+  }</p> </div> <div class="numero_round"> <p>${
+    this.baloto.ganador[2]
+  }</p> </div> <div class="numero_round"> <p>${
+    this.baloto.ganador[3]
+  }</p> </div> <div class="numero_round"> <p>${
+    this.baloto.ganador[4]
+  }</p> </div> <div class="numero_round_red"> <p>${
+    this.baloto.ganador[5]
+  }</p> </div> </div> </div> <div class="acom_s"> <h1>Acumulado para el sorteo</h1> <p class="fecha_Acomrlt">${
+    this.baloto.fechaProximoSorteo
+  }</p> </div> <div class="price"> <h4>${
+    this.baloto.acumulado
+  }</h4> </div> </div> </section>`;
 
   balotoLateral = `<div id="BalotoDesign" class="BalotoDesign">
     <div class="headerBalotoDesign">
