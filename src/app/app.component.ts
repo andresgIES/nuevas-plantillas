@@ -7,11 +7,58 @@ import { loteriasSemanales } from "../assets/loteriasSemanales";
   selector: "my-app",
   templateUrl: "./app.component.html"
 })
+
 export class AppComponent {
   resultadosSemanales: any[] = loteriasSemanales;
-  resultadosHoy: Loteria[] = loteriasHoy;
+  resultadosHoy = [
+  {
+    numero: "1111",
+    nombre: "Cauca",
+    fecha: "20-02-2021"
+  },
+  {
+    numero: "8371",
+    nombre: "boyaca",
+    fecha: "20-02-2021"
+  },
+  {
+    numero: "8694",
+    nombre: "chontico",
+    fecha: "20-02-2021"
+  },
+  {
+    numero: "3871",
+    nombre: "antioque",
+    fecha: "21-02-2021"
+  }
+];
 
-  resultado: string = "";
+  resultado = "";
+
+  for ( i = 0, i < this.resultadosHoy.lenght; i = i + 1 ) {
+    const element = resultadosHoy[i];
+    if (i% 2 === 0) {
+        const blanco = `<div class="panel30__grid__result__subgrid__secondary"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
+        this.resultado.concat(blanco);
+    }
+    else {
+        const cyan = `<div class="panel30__grid__result__subgrid"><div>${element.nombre}</div><div>${element.numero}</div><div>${element.fecha}</div></div>`;
+        this.resultado.concat(cyan);
+    }
+
+}
+
+let loteriasHoyLateral = `<section class="panel30__info">
+<div class="panel30__info__card">
+    <h1 class="panel30__info__card__title">resultados hoy</h1>
+    <div class="panel30__grid__subtitle">
+        <div>Loteria</div>
+        <div>Ganó</div>
+        <div>fecha</div>
+    </div>
+    <div class="panel30__grid__results">${resultado}</div>
+</div>
+</section>`;
 
   plantillaCentralHtml = `<div class="semanales" id="semanales"> <div class="logo"> <img src="https://www.codet-colombia.com/ies/new-template/semanales/Gana.png" alt="Logo Gana"> </div><h3 class="titulo">resultados semanales</h3> <div class="tabla"> <table class="tablaSemanales"> <thead> <tr> <th>Día</th> <th>Loteria</th> <th>Ganó</th> <th>Serie</th> <th>Favorito</th> <th>Fecha</th> <th>Hora</th> </tr></thead> <tbody> <tr> <td class="dia" rowspan="2">Lunes</td><td class="wh">Tolima</td><td class="wh">${
     this.resultadosSemanales[0].ganoTolima
