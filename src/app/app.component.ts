@@ -7,6 +7,9 @@ import { Billonario } from "./models/interfaces";
   templateUrl: "./app.component.html"
 })
 export class AppComponent {
+  // 21/04/2021
+  // si aumenta el numero de caracteres de billonario hay que modificar ligeramente las plantillas
+  // actualmente se admiten 11 caracteres en cuatroCifras y 10 caracteres en 3 cifras
   billonario: Billonario = {
     cuatroCifras: "851.379.997",
     tresCifras: "29.749.000"
