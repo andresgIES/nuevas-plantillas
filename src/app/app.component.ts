@@ -11,15 +11,15 @@ export class AppComponent {
   // si aumenta el numero de caracteres de billonario hay que modificar ligeramente las plantillas
   // actualmente se admiten 11 caracteres en cuatroCifras y 10 caracteres en 3 cifras
   billonario: Billonario = {
-    cuatroCifras: "851.379.997",
-    tresCifras: "29.749.000"
+    cuatroCifras: "878.356.437",
+    tresCifras: "39.700.849"
   };
 
   baloto: Baloto = {
-    fechaUltimoResultado: "Sábado, 10 de Abril del 2021",
-    ganador: ["17", "18", "36", "37", "42", "02"],
-    fechaProximoSorteo: "Miércoles, 14 de Abril del 2021",
-    acumulado: "$6'000.000.000"
+    fechaUltimoResultado: "Miércoles, 21 de Abril del 2021",
+    ganador: ["03", "12", "19", "20", "24", "02"],
+    fechaProximoSorteo: "Sábado, 24 de Abril del 2021",
+    acumulado: "$7'500.000.000"
   };
 
   billonarioCentral = `<section class="baloto_r">
@@ -256,8 +256,7 @@ export class AppComponent {
     </section>
 </main>`;
 
-  balotoCentral = `
-<section class="Baloto"> <div class="baloto_c"> <div class="resultado"> <p>resultado</p> </div><img src="/content/images/logos/baloto_logo.png" alt="" class="logo-bet" /> <div class="ultimo_c"> <div class="ultimo_r"> <h1> <span>último</span> resultado</h1> <p class="fecha_rlt">${
+  balotoCentral = `<section class="Baloto"> <div class="baloto_c"> <div class="resultado"> <p>resultado</p> </div><img src="/content/images/logos/baloto_logo.png" alt="" class="logo-bet" /> <div class="ultimo_c"> <div class="ultimo_r"> <h1> <span>último</span> resultado</h1> <p class="fecha_rlt">${
     this.baloto.fechaUltimoResultado
   }</p> </div> <div class="triangulo"> <img class="triangulo_svg" src="/content/images/triangulo.svg" alt=""> </div> <div class="ultimo_m"> <div class="numero_round"> <p>${
     this.baloto.ganador[0]
