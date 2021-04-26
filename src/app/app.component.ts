@@ -11,15 +11,15 @@ export class AppComponent {
   // si aumenta el numero de caracteres de billonario hay que modificar ligeramente las plantillas
   // actualmente se admiten 11 caracteres en cuatroCifras y 10 caracteres en 3 cifras
   billonario: Billonario = {
-    cuatroCifras: "878.356.437",
-    tresCifras: "39.700.849"
+    cuatroCifras: "889.992.327",
+    tresCifras: "22.409.612"
   };
 
   baloto: Baloto = {
-    fechaUltimoResultado: "Miércoles, 21 de Abril del 2021",
-    ganador: ["03", "12", "19", "20", "24", "02"],
-    fechaProximoSorteo: "Sábado, 24 de Abril del 2021",
-    acumulado: "$7'500.000.000"
+    fechaUltimoResultado: "Sábado, 24 de Abril del 2021",
+    ganador: ["06", "10", "25", "31", "36", "16"],
+    fechaProximoSorteo: "Miércoles, 28 de Abril del 2021",
+    acumulado: "$8'000.000.000"
   };
 
   billonarioCentral = `<section class="baloto_r">
